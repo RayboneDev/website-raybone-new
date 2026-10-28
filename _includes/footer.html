@@ -8,7 +8,7 @@
             
             <!-- Column 1: Brand & Bio -->
             <div class="lg:col-span-1">
-                <a href="/" class="text-3xl font-bold tracking-tighter text-white mb-6 inline-block">
+                <a href="{{ '/' | relative_url }}" class="text-3xl font-bold tracking-tighter text-white mb-6 inline-block">
                     Raybone<span class="text-indigo-500">.</span>
                 </a>
                 <p class="text-zinc-400 text-sm leading-relaxed mb-6">
@@ -35,8 +35,8 @@
                     <span class="w-2 h-2 rounded-full bg-indigo-500"></span> دسترسی سریع
                 </h4>
                 <ul class="space-y-3 text-sm text-zinc-400">
-                    <li><a href="/knowledge/" class="hover:text-indigo-400 transition-colors">دانشنامه</a></li>
-                    <li><a href="/blog/" class="hover:text-indigo-400 transition-colors">وبلاگ</a></li>
+                    <li><a href="{{ '/knowledge/' | relative_url }}" class="hover:text-indigo-400 transition-colors">دانشنامه</a></li>
+                    <li><a href="{{ '/blog/' | relative_url }}" class="hover:text-indigo-400 transition-colors">وبلاگ</a></li>
                     <li><a href="#" class="hover:text-indigo-400 transition-colors">درباره رایبُن</a></li>
                     <li><a href="#" class="hover:text-indigo-400 transition-colors">فرصت‌های شغلی</a></li>
                 </ul>
