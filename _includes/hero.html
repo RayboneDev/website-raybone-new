@@ -2,7 +2,7 @@
 <section class="relative w-full min-h-[80vh] flex flex-col items-center justify-center overflow-hidden border-b border-zinc-200 dark:border-zinc-800">
     
     <!-- Background Image (Stretches edge-to-edge) -->
-    <img src="/image2.png" alt="Raybone OS Architecture" class="absolute inset-0 w-full h-full object-cover -z-20 transform hover:scale-105 transition-transform duration-1000 ease-out" />
+    <img src="{{ '/image2.png' | relative_url }}" alt="Raybone OS Architecture" class="absolute inset-0 w-full h-full object-cover -z-20 transform hover:scale-105 transition-transform duration-1000 ease-out" />
     
     <!-- Cinematic Gradient Overlay (Ensures text is readable in both modes) -->
     <div class="absolute inset-0 bg-zinc-900/60 dark:bg-zinc-950/80 -z-10"></div>
@@ -27,7 +27,7 @@
             <a href="#" class="px-8 py-4 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-500 shadow-lg shadow-indigo-600/30 transition-all hover:-translate-y-1">
                 Android / AOSP / Linux
             </a>
-            <a href="/about" class="px-8 py-4 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/10 font-medium transition-all hover:-translate-y-1">
+            <a href="{{ '/about/' | relative_url }}" class="px-8 py-4 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/10 font-medium transition-all hover:-translate-y-1">
                 آشنایی با رایبُن ↓
             </a>
         </div>
