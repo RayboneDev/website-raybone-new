@@ -2,10 +2,69 @@
 layout: default
 title: دانشنامه | Raybone
 ---
-<div class="container mx-auto px-6 py-24">
-    <h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-10">دانشنامه سیستم‌عامل</h1>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <p class="text-slate-600 dark:text-slate-400">مقالات دانشنامه به زودی در اینجا قرار می‌گیرند...</p>
+
+<!-- Knowledge Base Header -->
+<section class="bg-brand-50 dark:bg-slate-900/50 border-b border-brand-100 dark:border-slate-800 py-20 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
+    <div class="container mx-auto px-6 text-center z-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">دانشنامه سیستم‌عامل</h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10">
+            مجموعه‌ای از مقالات، راهنماها و دانش فنی درباره سیستم‌عامل‌ها، اندروید، لینوکس و سیستم‌های نهفته.
+        </p>
     </div>
-</div>
+</section>
+
+<!-- Articles Grid -->
+<section class="container mx-auto px-6 py-16">
+    <!-- This creates a 3-column grid on large screens, 2 on tablets, 1 on mobile -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        {% for post in site.categories.knowledge %}
+        
+        <!-- Liquid Logic to Calculate Reading Time -->
+        {% capture word_count %}{{ post.content | number_of_words }}{% endcapture %}
+        {% assign reading_time = word_count | divided_by: 200 %}
+        {% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
+
+        <!-- Beautiful Article Card -->
+        <a href="{{ post.url }}" class="group flex flex-col bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-700 transition-all duration-300 hover:-translate-y-2">
+            <div class="h-52 overflow-hidden relative">
+                <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="Cover image for {{ post.title }}" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            
+            <div class="p-6 flex-grow flex flex-col justify-between">
+                <div>
+                    <!-- Optional Tag/Category -->
+                    <span class="text-xs font-semibold text-brand-600 dark:text-brand-400 mb-3 inline-block px-3 py-1 bg-brand-50 dark:bg-brand-900/30 rounded-full">
+                        {{ post.categories.first | default: "دانشنامه" }}
+                    </span>
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                        {{ post.title }}
+                    </h3>
+                    <!-- Extract the first 25 words of the post for a short description -->
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-3 mb-4">
+                        {{ post.excerpt | strip_html | truncatewords: 25 }}
+                    </p>
+                </div>
+                
+                <!-- Footer of the Card: Reading Time -->
+                <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center text-xs font-medium text-slate-500 dark:text-slate-400">
+                    <span class="flex items-center gap-1.5">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        زمان مطالعه: {{ post.reading_time }} دقیقه
+                    </span>
+                    <span class="flex items-center gap-1 text-brand-600 dark:text-brand-400 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                        مطالعه 
+                        <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </span>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+
+    </div>
+</section>
+
+
+{% include footer.html %}

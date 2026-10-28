@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="container mx-auto px-6 py-24 max-w-4xl">
+    <!-- Post Header -->
+    <header class="mb-12 text-center">
+        <span class="text-brand-600 dark:text-brand-400 font-bold mb-4 block">
+            {{ page.categories.first }}
+        </span>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+            {{ page.title }}
+        </h1>
+        <div class="text-slate-500 dark:text-slate-400 text-sm">
+            منتشر شده در {{ page.date | date: "%Y/%m/%d" }}
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <div class="prose prose-lg dark:prose-invert prose-slate mx-auto font-sans leading-loose">
+        {{ content }}
+    </div>
+</article>
