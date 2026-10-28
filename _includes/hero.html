@@ -1,27 +1,35 @@
-<section class="relative container mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center overflow-hidden">
-    <!-- Animated background blob for visual magic -->
-    <div class="absolute top-0 right-0 -z-10 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl animate-float"></div>
+<!-- Full-Bleed Modern Hero Section -->
+<section class="relative w-full min-h-[80vh] flex flex-col items-center justify-center overflow-hidden border-b border-zinc-200 dark:border-zinc-800">
     
-    <div class="md:w-1/2 z-10 animate-fade-in-up">
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight text-slate-900 dark:text-white">
+    <!-- Background Image (Stretches edge-to-edge) -->
+    <img src="/image2.png" alt="Raybone OS Architecture" class="absolute inset-0 w-full h-full object-cover -z-20 transform hover:scale-105 transition-transform duration-1000 ease-out" />
+    
+    <!-- Cinematic Gradient Overlay (Ensures text is readable in both modes) -->
+    <div class="absolute inset-0 bg-zinc-900/60 dark:bg-zinc-950/80 -z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-transparent to-transparent dark:from-zinc-950/90 -z-10"></div>
+
+    <!-- Centered Content -->
+    <div class="relative z-10 text-center px-6 animate-fade-in-up max-w-4xl mx-auto">
+        <span class="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-zinc-200 text-sm font-medium mb-6">
+            سیستم‌عامل هوشمند، معماری پایدار
+        </span>
+        
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight text-white">
             سیستم‌عامل،<br/>
-            برای چیزی که <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-600">واقعاً می‌سازید</span>
+            برای چیزی که <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-300">واقعاً می‌سازید</span>
         </h1>
-        <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed max-w-lg">
+        
+        <p class="text-lg md:text-xl text-zinc-300 mb-10 leading-relaxed max-w-2xl mx-auto">
             توسعه و سفارشی‌سازی سیستم‌عامل و نرم‌افزار پایه دستگاه متناسب با سخت‌افزار، کاربرد و مدل کسب‌وکار شما.
         </p>
-        <div class="flex flex-wrap gap-4">
-            <a href="#" class="px-8 py-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:scale-105 transition-transform shadow-xl">
+        
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#" class="px-8 py-4 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-500 shadow-lg shadow-indigo-600/30 transition-all hover:-translate-y-1">
                 Android / AOSP / Linux
             </a>
-            <a href="#" class="px-8 py-3 rounded-full bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-400 font-bold hover:bg-brand-100 transition-colors">
+            <a href="/about" class="px-8 py-4 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/10 font-medium transition-all hover:-translate-y-1">
                 آشنایی با رایبُن ↓
             </a>
         </div>
-    </div>
-    
-    <div class="md:w-1/2 mt-16 md:mt-0 relative z-10 perspective-1000">
-        <!-- Floating Object Animation -->
-        <img src="image1.jpeg" alt="Raybone OS Architecture" class="rounded-3xl shadow-2xl animate-float border border-white/20 dark:border-slate-700/50 backdrop-blur-sm" />
     </div>
 </section>

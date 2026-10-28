@@ -1,39 +1,89 @@
-<section class="py-24 bg-slate-50 dark:bg-slate-900/80 transition-colors duration-300">
-    <div class="container mx-auto px-6">
+<!-- Added bg-indigo-50/40 for that soft, cool tint you liked -->
+<section class="py-24 bg-indigo-50/40 dark:bg-zinc-900/80 transition-colors duration-300 relative overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">چرا رایبُن؟</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-zinc-50 mb-4">چرا رایبُن؟</h2>
+            <p class="text-lg text-zinc-600 dark:text-zinc-400">آنچه ما را در توسعه سیستم‌عامل و نرم‌افزارهای پایه متمایز می‌کند</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Feature 1 -->
-            <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">تخصص عمیق</h3>
-                <p class="text-slate-600 dark:text-slate-400">سال‌ها تجربه در توسعه سیستم‌عامل برای دستگاه‌های متنوع و پیچیده</p>
+            <div class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 border border-zinc-100 dark:border-zinc-700 transition-all duration-300">
+                <!-- Image Header -->
+                <div class="h-48 relative overflow-hidden">
+                    <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="تخصص عمیق" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-800 to-transparent"></div>
+                    <!-- Accent Icon floating over the image -->
+                    <div class="absolute bottom-4 right-6 w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 backdrop-blur-sm flex items-center justify-center text-amber-500 shadow-sm group-hover:rotate-3 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                </div>
+                <!-- Card Content -->
+                <div class="p-6 pt-2 flex-grow">
+                    <h3 class="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">تخصص عمیق</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal text-sm">سال‌ها تجربه در توسعه سیستم‌عامل برای دستگاه‌های متنوع و پیچیده صنعتی و تجاری.</p>
+                </div>
             </div>
 
             <!-- Feature 2 -->
-            <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">انعطاف‌پذیری</h3>
-                <p class="text-slate-600 dark:text-slate-400">از سفارشی‌سازی جزئی تا طراحی سیستم‌عامل اختصاصی</p>
+            <div class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 border border-zinc-100 dark:border-zinc-700 transition-all duration-300">
+                <div class="h-48 relative overflow-hidden">
+                    <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="انعطاف‌پذیری" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-800 to-transparent"></div>
+                    <div class="absolute bottom-4 right-6 w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 backdrop-blur-sm flex items-center justify-center text-amber-500 shadow-sm group-hover:rotate-3 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 14v1a3 3 0 003 3h12a3 3 0 003-3v-1m-1-4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                    </div>
+                </div>
+                <div class="p-6 pt-2 flex-grow">
+                    <h3 class="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">انعطاف‌پذیری</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal text-sm">از سفارشی‌سازی جزئی رام‌ها تا طراحی سیستم‌عامل اختصاصی کاملاً منطبق بر سخت‌افزار شما.</p>
+                </div>
             </div>
-
+            
             <!-- Feature 3 -->
-            <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">امنیت در طراحی</h3>
-                <p class="text-slate-600 dark:text-slate-400">امنیت از لایه‌های سیستم تا سرویس‌ها و ارتباطات</p>
+            <div class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 border border-zinc-100 dark:border-zinc-700 transition-all duration-300">
+                <div class="h-48 relative overflow-hidden">
+                    <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="امنیت در طراحی" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-800 to-transparent"></div>
+                    <div class="absolute bottom-4 right-6 w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 backdrop-blur-sm flex items-center justify-center text-amber-500 shadow-sm group-hover:rotate-3 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                </div>
+                <div class="p-6 pt-2 flex-grow">
+                    <h3 class="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">امنیت در طراحی</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal text-sm">امنیت یکپارچه از پایین‌ترین لایه‌های هسته سیستم‌عامل تا سرویس‌ها و ارتباطات ابری.</p>
+                </div>
             </div>
 
             <!-- Feature 4 -->
-            <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all lg:col-start-2">
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">پشتیبانی بلندمدت</h3>
-                <p class="text-slate-600 dark:text-slate-400">همراه محصول شما در تمام مراحل توسعه و چرخه عمر محصول</p>
+            <div class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 border border-zinc-100 dark:border-zinc-700 transition-all duration-300 lg:col-start-2">
+                <div class="h-48 relative overflow-hidden">
+                    <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="پشتیبانی بلندمدت" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-800 to-transparent"></div>
+                    <div class="absolute bottom-4 right-6 w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 backdrop-blur-sm flex items-center justify-center text-amber-500 shadow-sm group-hover:rotate-3 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                </div>
+                <div class="p-6 pt-2 flex-grow">
+                    <h3 class="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">پشتیبانی بلندمدت</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal text-sm">همراه مطمئن محصول شما در تمام مراحل توسعه و چرخه عمر طولانی‌مدت دستگاه در بازار.</p>
+                </div>
             </div>
 
             <!-- Feature 5 -->
-            <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">متن‌باز و استاندارد</h3>
-                <p class="text-slate-600 dark:text-slate-400">استفاده از قدرت متن‌باز برای ساخت راهکارهای پایدار و مستقل</p>
+            <div class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 border border-zinc-100 dark:border-zinc-700 transition-all duration-300">
+                <div class="h-48 relative overflow-hidden">
+                    <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="متن‌باز و استاندارد" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-800 to-transparent"></div>
+                    <div class="absolute bottom-4 right-6 w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 backdrop-blur-sm flex items-center justify-center text-amber-500 shadow-sm group-hover:rotate-3 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                </div>
+                <div class="p-6 pt-2 flex-grow">
+                    <h3 class="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">متن‌باز و استاندارد</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal text-sm">استفاده هوشمندانه از قدرت اکوسیستم متن‌باز برای ساخت راهکارهای پایدار، مستقل و توسعه‌پذیر.</p>
+                </div>
             </div>
 
         </div>
