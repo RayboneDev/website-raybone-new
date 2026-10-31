@@ -83,54 +83,104 @@
     
     <main>
         <!-- Hero and Industries (You can extract these to includes too!) -->
-<!-- Full-Bleed Modern Hero Section -->
-<section class="relative w-full min-h-[80vh] flex items-center overflow-hidden border-b border-zinc-200 dark:border-zinc-800">
+<!-- Full-Bleed Modern Hero Section with Auto-Slider -->
+<section id="hero-slider" class="relative w-full min-h-[80vh] overflow-hidden border-b border-zinc-200 dark:border-zinc-800">
     
-    <!-- Background Image (Stretches edge-to-edge) -->
-    <img src="/website-raybone-new/assets/images/hero-image4.jpeg" alt="Raybone OS Architecture" class="absolute inset-0 w-full h-full object-cover object-[center_70%] -z-20 transform hover:scale-105 transition-transform duration-1000 ease-out" />
-    
-    <!-- Cinematic Gradient Overlay -->
-    <div class="absolute inset-0 bg-zinc-900/30 dark:bg-zinc-950/40 -z-10"></div>
-    <div class="absolute inset-0 bg-gradient-to-l from-zinc-950/90 via-zinc-950/50 to-transparent -z-10"></div>
-
-    <!-- Content Container -->
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12">
+    <!-- ================= SLIDE 1 ================= -->
+    <div class="hero-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-100 z-10">
+        <!-- Background Image 1 -->
+        <img src="/website-raybone-new/assets/images/hero-image4.jpeg" alt="Raybone OS Architecture" class="absolute inset-0 w-full h-full object-cover object-[center_70%] -z-20 transform scale-105" />
         
-        <!-- 12-Column Grid: In RTL, col 1 is on the right -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <!-- Right Column (Text Content) - Takes up 5 of 12 columns (pushed to the right edge) -->
-            <div class="text-right lg:col-span-5 lg:col-start-1 animate-fade-in-up" dir="rtl">
-                <span class="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-zinc-200 text-sm font-medium mb-6">
-                    سیستم‌عامل هوشمند، معماری پایدار
-                </span>
-                
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
-                    سیستم‌عامل،<br/>
-                    برای چیزی که <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-300">واقعاً می‌سازید</span>
-                </h1>
-                
-                <!-- Removed max-w-xl since the column is now naturally narrower -->
-                <p class="text-base md:text-lg text-zinc-300 mb-10 leading-relaxed ml-auto">
-                    توسعه و سفارشی‌سازی سیستم‌عامل و نرم‌افزار پایه دستگاه متناسب با سخت‌افزار، کاربرد و مدل کسب‌وکار شما.
-                </p>
-                
-                <div class="flex flex-wrap justify-start gap-4">
-                    <a href="#" class="px-8 py-4 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-500 shadow-lg shadow-indigo-600/30 transition-all hover:-translate-y-1">
-                        Android / AOSP / Linux
-                    </a>
-                    <a href="/website-raybone-new/about/" class="px-8 py-4 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/10 font-medium transition-all hover:-translate-y-1">
-                        آشنایی با رایبُن ↓
-                    </a>
+        <!-- Cinematic Gradient Overlay -->
+        <div class="absolute inset-0 bg-zinc-900/30 dark:bg-zinc-950/40 -z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-l from-zinc-950/90 via-zinc-950/50 to-transparent -z-10"></div>
+
+        <!-- Content Container -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content 1 -->
+                <div class="text-right lg:col-span-5 lg:col-start-1" dir="rtl">
+                    <span class="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-zinc-200 text-sm font-medium mb-6">
+                        سیستم‌عامل هوشمند، معماری پایدار
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
+                        سیستم‌عامل،<br/>
+                        برای چیزی که <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-300">واقعاً می‌سازید</span>
+                    </h1>
+                    <p class="text-base md:text-lg text-zinc-300 mb-10 leading-relaxed ml-auto">
+                        توسعه و سفارشی‌سازی سیستم‌عامل و نرم‌افزار پایه دستگاه متناسب با سخت‌افزار، کاربرد و مدل کسب‌وکار شما.
+                    </p>
+                    <div class="flex flex-wrap justify-start gap-4">
+                        <a href="#" class="px-8 py-4 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-500 shadow-lg shadow-indigo-600/30 transition-all hover:-translate-y-1">
+                            Android / AOSP / Linux
+                        </a>
+                        <a href="/website-raybone-new/about/" class="px-8 py-4 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/10 font-medium transition-all hover:-translate-y-1">
+                            آشنایی با رایبُن ↓
+                        </a>
+                    </div>
                 </div>
+                <div class="hidden lg:block lg:col-span-7 lg:col-start-6"></div>
             </div>
+        </div>
+    </div>
 
-            <!-- Left Column (Empty space for the monitor) - Takes up 7 of 12 columns -->
-            <div class="hidden lg:block lg:col-span-7 lg:col-start-6"></div>
+    <!-- ================= SLIDE 2 ================= -->
+    <div class="hero-slide absolute inset-0 w-full h-full flex items-center transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+        <!-- Background Image 2 (PNG) -->
+        <img src="/website-raybone-new/assets/images/hero-image4.png" alt="Raybone Software Solutions" class="absolute inset-0 w-full h-full object-cover object-[center_70%] -z-20 transform scale-105" />
+        
+        <!-- Cinematic Gradient Overlay -->
+        <div class="absolute inset-0 bg-zinc-900/30 dark:bg-zinc-950/40 -z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-l from-zinc-950/90 via-zinc-950/50 to-transparent -z-10"></div>
 
+        <!-- Content Container -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content 2 (New Text) -->
+                <div class="text-right lg:col-span-6 lg:col-start-1" dir="rtl">
+                    <span class="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-zinc-200 text-sm font-medium mb-6">
+                        توسعه بر اساس محصولات شما
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
+                        از برنامک تا سیستم‌عامل،<br/>
+                        از گوشی تا <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-teal-300">دستگاه‌های تخصصی</span>
+                    </h1>
+                    <p class="text-base md:text-lg text-zinc-300 mb-10 leading-relaxed ml-auto">
+                        هر محصول نیازهای نرم‌افزاری خودش را دارد. ما این نیازها را به قابلیت‌های واقعی تبدیل می‌کنیم؛ از تغییر نرم‌افزار تا سفارشی‌سازی سیستم‌عامل متناسب با محصول شما.
+                    </p>
+                    <div class="flex flex-wrap justify-start gap-4">
+                        <a href="mailto:info@raybone.ir" class="px-8 py-4 rounded-full bg-emerald-600 text-white font-medium hover:bg-emerald-500 shadow-lg shadow-emerald-600/30 transition-all hover:-translate-y-1">
+                            درباره محصولتان صحبت کنیم
+                        </a>
+                        <a href="#services" class="px-8 py-4 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/10 font-medium transition-all hover:-translate-y-1">
+                            آشنایی با توانمندی‌ها ↓
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:block lg:col-span-6 lg:col-start-7"></div>
+            </div>
         </div>
     </div>
 </section>
+
+<!-- JavaScript to control the automatic fade slider -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+
+        // 4 seconds interval
+        setInterval(() => {
+            slides[currentSlide].classList.remove('opacity-100', 'z-10');
+            slides[currentSlide].classList.add('opacity-0', 'z-0');
+            
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            slides[currentSlide].classList.remove('opacity-0', 'z-0');
+            slides[currentSlide].classList.add('opacity-100', 'z-10');
+        }, 3000);
+    });
+</script>
 <!-- Industries Section: Cinematic Spotlight Cards (Fixed Z-Index) -->
 <section class="py-24 bg-white dark:bg-zinc-950 border-y border-zinc-100 dark:border-zinc-800">
     <div class="container mx-auto px-6">
