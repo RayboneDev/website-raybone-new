@@ -49,7 +49,7 @@
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-zinc-950/80 border-b border-zinc-200 dark:border-zinc-800">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold tracking-tighter text-indigo-600 dark:text-indigo-400">Raybone</a>
+            <a href="/website-raybone-new/" class="text-2xl font-bold tracking-tighter text-indigo-600 dark:text-indigo-400">Raybone</a>
             
             <div class="hidden md:flex items-center space-x-reverse space-x-8 text-sm font-medium">
                 <div class="dropdown relative py-4">
@@ -65,9 +65,9 @@
                 
                 <a href="#" class="text-zinc-600 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">صنایع</a>
                 <a href="#" class="text-zinc-600 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">راهکارها</a>
-                <a href="/about/" class="text-zinc-600 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">درباره رایبُن</a>
-                <a href="/blog/" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">وبلاگ</a>
-                <a href="/knowledge/" class="text-zinc-600 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">دانشنامه</a>
+                <a href="/website-raybone-new/about/" class="text-zinc-600 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">درباره رایبُن</a>
+                <a href="/website-raybone-new/blog/" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">وبلاگ</a>
+                <a href="/website-raybone-new/knowledge/" class="text-zinc-600 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">دانشنامه</a>
             </div>
 
             <div class="flex items-center gap-4">
@@ -84,37 +84,50 @@
     <main>
         <!-- Hero and Industries (You can extract these to includes too!) -->
 <!-- Full-Bleed Modern Hero Section -->
-<section class="relative w-full min-h-[80vh] flex flex-col items-center justify-center overflow-hidden border-b border-zinc-200 dark:border-zinc-800">
+<section class="relative w-full min-h-[80vh] flex items-center overflow-hidden border-b border-zinc-200 dark:border-zinc-800">
     
     <!-- Background Image (Stretches edge-to-edge) -->
-    <img src="/image2.png" alt="Raybone OS Architecture" class="absolute inset-0 w-full h-full object-cover -z-20 transform hover:scale-105 transition-transform duration-1000 ease-out" />
+    <img src="/website-raybone-new/assets/images/hero-image4.jpeg" alt="Raybone OS Architecture" class="absolute inset-0 w-full h-full object-cover object-[center_70%] -z-20 transform hover:scale-105 transition-transform duration-1000 ease-out" />
     
-    <!-- Cinematic Gradient Overlay (Ensures text is readable in both modes) -->
-    <div class="absolute inset-0 bg-zinc-900/60 dark:bg-zinc-950/80 -z-10"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-transparent to-transparent dark:from-zinc-950/90 -z-10"></div>
+    <!-- Cinematic Gradient Overlay -->
+    <div class="absolute inset-0 bg-zinc-900/30 dark:bg-zinc-950/40 -z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-l from-zinc-950/90 via-zinc-950/50 to-transparent -z-10"></div>
 
-    <!-- Centered Content -->
-    <div class="relative z-10 text-center px-6 animate-fade-in-up max-w-4xl mx-auto">
-        <span class="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-zinc-200 text-sm font-medium mb-6">
-            سیستم‌عامل هوشمند، معماری پایدار
-        </span>
+    <!-- Content Container -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12">
         
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight text-white">
-            سیستم‌عامل،<br/>
-            برای چیزی که <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-300">واقعاً می‌سازید</span>
-        </h1>
-        
-        <p class="text-lg md:text-xl text-zinc-300 mb-10 leading-relaxed max-w-2xl mx-auto">
-            توسعه و سفارشی‌سازی سیستم‌عامل و نرم‌افزار پایه دستگاه متناسب با سخت‌افزار، کاربرد و مدل کسب‌وکار شما.
-        </p>
-        
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#" class="px-8 py-4 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-500 shadow-lg shadow-indigo-600/30 transition-all hover:-translate-y-1">
-                Android / AOSP / Linux
-            </a>
-            <a href="/about/" class="px-8 py-4 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/10 font-medium transition-all hover:-translate-y-1">
-                آشنایی با رایبُن ↓
-            </a>
+        <!-- 12-Column Grid: In RTL, col 1 is on the right -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Right Column (Text Content) - Takes up 5 of 12 columns (pushed to the right edge) -->
+            <div class="text-right lg:col-span-5 lg:col-start-1 animate-fade-in-up" dir="rtl">
+                <span class="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-zinc-200 text-sm font-medium mb-6">
+                    سیستم‌عامل هوشمند، معماری پایدار
+                </span>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
+                    سیستم‌عامل،<br/>
+                    برای چیزی که <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-300">واقعاً می‌سازید</span>
+                </h1>
+                
+                <!-- Removed max-w-xl since the column is now naturally narrower -->
+                <p class="text-base md:text-lg text-zinc-300 mb-10 leading-relaxed ml-auto">
+                    توسعه و سفارشی‌سازی سیستم‌عامل و نرم‌افزار پایه دستگاه متناسب با سخت‌افزار، کاربرد و مدل کسب‌وکار شما.
+                </p>
+                
+                <div class="flex flex-wrap justify-start gap-4">
+                    <a href="#" class="px-8 py-4 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-500 shadow-lg shadow-indigo-600/30 transition-all hover:-translate-y-1">
+                        Android / AOSP / Linux
+                    </a>
+                    <a href="/website-raybone-new/about/" class="px-8 py-4 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/10 font-medium transition-all hover:-translate-y-1">
+                        آشنایی با رایبُن ↓
+                    </a>
+                </div>
+            </div>
+
+            <!-- Left Column (Empty space for the monitor) - Takes up 7 of 12 columns -->
+            <div class="hidden lg:block lg:col-span-7 lg:col-start-6"></div>
+
         </div>
     </div>
 </section>
@@ -131,7 +144,7 @@
             <!-- Industry Card 1: Mobile -->
             <div class="group relative h-[22rem] rounded-[2rem] overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500">
                 <!-- Full Background Image (z-0) -->
-                <img src="/image1.jpeg" alt="Mobile" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out z-0" />
+                <img src="/website-raybone-new/assets/images/mobile-image1.jpeg" alt="Mobile" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out z-0" />
                 
                 <!-- Dynamic Gradient Overlay (z-10) -->
                 <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent opacity-80 group-hover:opacity-95 group-hover:from-indigo-950 transition-all duration-500 z-10"></div>
@@ -150,7 +163,7 @@
             
             <!-- Industry Card 2: Payment -->
             <div class="group relative h-[22rem] rounded-[2rem] overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500">
-                <img src="/image1.jpeg" alt="Payment" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out z-0" />
+                <img src="/website-raybone-new/assets/images/pos-image1.jpeg" alt="Payment" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out z-0" />
                 <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent opacity-80 group-hover:opacity-95 group-hover:from-indigo-950 transition-all duration-500 z-10"></div>
                 
                 <div class="absolute top-6 left-6 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 z-20">
@@ -165,7 +178,7 @@
             
             <!-- Industry Card 3: Industrial -->
             <div class="group relative h-[22rem] rounded-[2rem] overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500">
-                <img src="/image1.jpeg" alt="Industrial" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out z-0" />
+                <img src="/website-raybone-new/assets/images/industry-image1.png" alt="Industrial" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out z-0" />
                 <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent opacity-80 group-hover:opacity-95 group-hover:from-indigo-950 transition-all duration-500 z-10"></div>
                 
                 <div class="absolute top-6 left-6 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 z-20">
@@ -180,7 +193,7 @@
 
             <!-- Industry Card 4: Embedded -->
             <div class="group relative h-[22rem] rounded-[2rem] overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500">
-                <img src="/image1.jpeg" alt="Embedded" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out z-0" />
+                <img src="/website-raybone-new/assets/images/embedded-image1.jpeg" alt="Embedded" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out z-0" />
                 <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent opacity-80 group-hover:opacity-95 group-hover:from-indigo-950 transition-all duration-500 z-10"></div>
                 
                 <div class="absolute top-6 left-6 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 z-20">
@@ -212,8 +225,9 @@
             <div class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 border border-zinc-100 dark:border-zinc-700 transition-all duration-300">
                 <!-- Image Header -->
                 <div class="h-48 relative overflow-hidden">
-                    <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="تخصص عمیق" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-800 to-transparent"></div>
+                    <img src="/website-raybone-new/assets/images/feature-deep-2.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="تخصص عمیق" />
+                    <!-- Softened Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-white/60 dark:from-zinc-800/60 via-transparent to-transparent"></div>
                     <!-- Accent Icon floating over the image -->
                     <div class="absolute bottom-4 right-6 w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 backdrop-blur-sm flex items-center justify-center text-amber-500 shadow-sm group-hover:rotate-3 transition-transform">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
@@ -229,10 +243,11 @@
             <!-- Feature 2 -->
             <div class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 border border-zinc-100 dark:border-zinc-700 transition-all duration-300">
                 <div class="h-48 relative overflow-hidden">
-                    <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="انعطاف‌پذیری" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-800 to-transparent"></div>
+                    <img src="/website-raybone-new/assets/images/feature-flexibility-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="انعطاف‌پذیری" />
+                    <!-- Softened Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-white/60 dark:from-zinc-800/60 via-transparent to-transparent"></div>
                     <div class="absolute bottom-4 right-6 w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 backdrop-blur-sm flex items-center justify-center text-amber-500 shadow-sm group-hover:rotate-3 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 14v1a3 3 0 003 3h12a3 3 0 003-3v-1m-1-4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
                     </div>
                 </div>
                 <div class="p-6 pt-2 flex-grow">
@@ -244,8 +259,9 @@
             <!-- Feature 3 -->
             <div class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 border border-zinc-100 dark:border-zinc-700 transition-all duration-300">
                 <div class="h-48 relative overflow-hidden">
-                    <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="امنیت در طراحی" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-800 to-transparent"></div>
+                    <img src="/website-raybone-new/assets/images/feature-security-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="امنیت در طراحی" />
+                    <!-- Softened Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-white/60 dark:from-zinc-800/60 via-transparent to-transparent"></div>
                     <div class="absolute bottom-4 right-6 w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 backdrop-blur-sm flex items-center justify-center text-amber-500 shadow-sm group-hover:rotate-3 transition-transform">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
@@ -259,8 +275,9 @@
             <!-- Feature 4 -->
             <div class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 border border-zinc-100 dark:border-zinc-700 transition-all duration-300 lg:col-start-2">
                 <div class="h-48 relative overflow-hidden">
-                    <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="پشتیبانی بلندمدت" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-800 to-transparent"></div>
+                    <img src="/website-raybone-new/assets/images/feature-long-support-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="پشتیبانی بلندمدت" />
+                    <!-- Softened Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-white/60 dark:from-zinc-800/60 via-transparent to-transparent"></div>
                     <div class="absolute bottom-4 right-6 w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 backdrop-blur-sm flex items-center justify-center text-amber-500 shadow-sm group-hover:rotate-3 transition-transform">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
@@ -274,8 +291,9 @@
             <!-- Feature 5 -->
             <div class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 border border-zinc-100 dark:border-zinc-700 transition-all duration-300">
                 <div class="h-48 relative overflow-hidden">
-                    <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="متن‌باز و استاندارد" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-800 to-transparent"></div>
+                    <img src="/website-raybone-new/assets/images/feature-open-source-1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="متن‌باز و استاندارد" />
+                    <!-- Softened Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-white/60 dark:from-zinc-800/60 via-transparent to-transparent"></div>
                     <div class="absolute bottom-4 right-6 w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 backdrop-blur-sm flex items-center justify-center text-amber-500 shadow-sm group-hover:rotate-3 transition-transform">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                     </div>
@@ -303,7 +321,7 @@
                     <p class="text-zinc-500 dark:text-zinc-400 mt-2">دانش سیستم‌عامل و نرم‌افزارهای پایه‌ای سیستمی</p>
                 </div>
                 <!-- The Redirect Link -->
-                <a href="/knowledge/" class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 font-medium flex items-center gap-1 group">
+                <a href="/website-raybone-new/knowledge/" class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 font-medium flex items-center gap-1 group">
                     همه مطالب 
                     <span class="transform transition-transform group-hover:-tranzinc-x-1">↗</span>
                 </a>
@@ -312,7 +330,7 @@
             <div class="space-y-6">
                 <!-- Preview Card 1 -->
                 <a href="#" class="group flex gap-4 items-center bg-white dark:bg-zinc-800 p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-zinc-100 dark:border-zinc-700">
-                    <img src="/image1.jpeg" class="w-24 h-24 rounded-xl object-cover" alt="Article image" />
+                    <img src="/website-raybone-new/assets/images/image1.jpeg" class="w-24 h-24 rounded-xl object-cover" alt="Article image" />
                     <div>
                         <h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Android و AOSP؛ از پلتفرم تا محصول</h3>
                         <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-2">وقتی از Android برای یک محصول اختصاصی صحبت می‌کنیم، نقطه شروع فقط انتخاب نسخه سیستم‌عامل نیست...</p>
@@ -321,7 +339,7 @@
                 
                 <!-- Preview Card 2 -->
                 <a href="#" class="group flex gap-4 items-center bg-white dark:bg-zinc-800 p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-zinc-100 dark:border-zinc-700">
-                    <img src="/image1.jpeg" class="w-24 h-24 rounded-xl object-cover" alt="Article image" />
+                    <img src="/website-raybone-new/assets/images/image1.jpeg" class="w-24 h-24 rounded-xl object-cover" alt="Article image" />
                     <div>
                         <h3 class="font-bold text-lg text-zinc-800 dark:text-zinc-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">سیستم‌های نهفته چه زمانی انتخاب بهتری هستند؟</h3>
                         <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-2">محصولاتی که باید سال‌ها پایدار، کم‌مصرف و قابل کنترل باشند، معمولاً به معماری نهفته نیاز دارند...</p>
@@ -337,7 +355,7 @@
                     <h2 class="text-3xl font-bold text-zinc-900 dark:text-white">وبلاگ</h2>
                     <p class="text-zinc-500 dark:text-zinc-400 mt-2">یادداشت‌ها و تجربیات تیم رایبُن</p>
                 </div>
-                <a href="/blog/" class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 font-medium flex items-center gap-1 group">
+                <a href="/website-raybone-new/blog/" class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 font-medium flex items-center gap-1 group">
                     همه یادداشت‌ها 
                     <span class="transform transition-transform group-hover:-tranzinc-x-1">↗</span>
                 </a>
@@ -346,7 +364,7 @@
             <!-- Featured Blog Card -->
             <a href="#" class="block group bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-zinc-100 dark:border-zinc-700 transition-all duration-300 hover:-tranzinc-y-1">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Blog image" />
+                    <img src="/website-raybone-new/assets/images/image1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Blog image" />
                     <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/40 to-transparent"></div>
                     <div class="absolute bottom-6 px-6 text-white w-full">
                         <span class="text-xs font-bold bg-indigo-600 px-3 py-1 rounded-full mb-3 inline-block">2026 / 10 / 16</span>
@@ -373,7 +391,7 @@
             
             <!-- Column 1: Brand & Bio -->
             <div class="lg:col-span-1">
-                <a href="/" class="text-3xl font-bold tracking-tighter text-white mb-6 inline-block">
+                <a href="/website-raybone-new/" class="text-3xl font-bold tracking-tighter text-white mb-6 inline-block">
                     Raybone<span class="text-indigo-500">.</span>
                 </a>
                 <p class="text-zinc-400 text-sm leading-relaxed mb-6">
@@ -400,8 +418,8 @@
                     <span class="w-2 h-2 rounded-full bg-indigo-500"></span> دسترسی سریع
                 </h4>
                 <ul class="space-y-3 text-sm text-zinc-400">
-                    <li><a href="/knowledge/" class="hover:text-indigo-400 transition-colors">دانشنامه</a></li>
-                    <li><a href="/blog/" class="hover:text-indigo-400 transition-colors">وبلاگ</a></li>
+                    <li><a href="/website-raybone-new/knowledge/" class="hover:text-indigo-400 transition-colors">دانشنامه</a></li>
+                    <li><a href="/website-raybone-new/blog/" class="hover:text-indigo-400 transition-colors">وبلاگ</a></li>
                     <li><a href="#" class="hover:text-indigo-400 transition-colors">درباره رایبُن</a></li>
                     <li><a href="#" class="hover:text-indigo-400 transition-colors">فرصت‌های شغلی</a></li>
                 </ul>
