@@ -91,7 +91,7 @@
                 <a href="/website-raybone-new/about/"
                     class="text-zinc-600 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">درباره
                     رایبُن</a>
-                <a href="/website-raybone-new/blog/"
+                <a href="javascript:void(0)"
                     class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">وبلاگ</a>
                 <a href="/website-raybone-new/knowledge/"
                     class="text-zinc-600 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">دانشنامه</a>
@@ -121,19 +121,52 @@
 
     <main>
         <!-- Knowledge Base Header -->
-<section class="bg-indigo-50 dark:bg-zinc-900/50 border-b border-indigo-100 dark:border-zinc-800 py-20 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -z-10 tranzinc-x-1/2 -tranzinc-y-1/2"></div>
-    <div class="container mx-auto px-6 text-center z-10">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-zinc-900 dark:text-white mb-6">دانشنامه سیستم‌عامل</h1>
-        <p class="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto mb-10">
+<section class="border-b border-indigo-100 dark:border-zinc-800 py-24 relative overflow-hidden">
+    
+    <!-- Image 1 (Visible by default) -->
+    <img id="banner-img-1" src="/website-raybone-new/assets/images/knowledge-banner-2.jpeg" class="absolute inset-0 w-full h-full object-cover object-center z-0 transition-opacity duration-1000 opacity-100" alt="دانشنامه سیستم‌عامل" />
+    
+    <!-- Image 2 (Hidden by default) -->
+    <img id="banner-img-2" src="/website-raybone-new/assets/images/knowledge-banner-3.jpeg" class="absolute inset-0 w-full h-full object-cover object-center z-0 transition-opacity duration-1000 opacity-0" alt="دانشنامه سیستم‌عامل" />
+    
+    <!-- Radial Gradient (Z-index updated to 10 so it sits above both images) -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/85 via-zinc-900/65 to-transparent z-10"></div>
+    
+    <!-- Content (Z-index updated to 20 so it sits above the gradient) -->
+    <div class="container mx-auto px-6 text-center relative z-20">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 drop-shadow-lg shadow-black">
+            دانشنامه سیستم‌عامل
+        </h1>
+        <p class="text-lg text-white max-w-2xl mx-auto mb-10 drop-shadow-md shadow-black">
             مجموعه‌ای از مقالات، راهنماها و دانش فنی درباره سیستم‌عامل‌ها، اندروید، لینوکس و سیستم‌های نهفته.
         </p>
     </div>
+
 </section>
+
+<!-- Simple Script to swap images every 3 seconds -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const img1 = document.getElementById('banner-img-1');
+        const img2 = document.getElementById('banner-img-2');
+        
+        // Run this every 3000 milliseconds (3 seconds)
+        setInterval(() => {
+            if (img1.classList.contains('opacity-100')) {
+                // Fade out Image 1, Fade in Image 2
+                img1.classList.replace('opacity-100', 'opacity-0');
+                img2.classList.replace('opacity-0', 'opacity-100');
+            } else {
+                // Fade out Image 2, Fade in Image 1
+                img2.classList.replace('opacity-100', 'opacity-0');
+                img1.classList.replace('opacity-0', 'opacity-100');
+            }
+        }, 5000);
+    });
+</script>
 
 <!-- Articles Grid -->
 <section class="container mx-auto px-6 py-16">
-    <!-- This creates a 3-column grid on large screens, 2 on tablets, 1 on mobile -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         
@@ -146,29 +179,28 @@
         <!-- Beautiful Article Card -->
         <a href="/website-raybone-new/knowledge/2026/10/28/ios-aosp.html" class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-zinc-100 dark:border-zinc-700 transition-all duration-300 hover:-translate-y-2">
             <div class="h-52 overflow-hidden relative">
-                <img src="/website-raybone-new/image1.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="Cover image for IOS و AOSP؛ از پلتفرم تا محصول" />
+                <!-- FIX: Use post.image with a fallback default image -->
+                <img src="/website-raybone-new/assets/images/ios-aosp.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="Cover image for IOS و AOSP؛ از پلتفرم تا محصول" />
                 <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             
             <div class="p-6 flex-grow flex flex-col justify-between">
                 <div>
-                    <!-- Optional Tag/Category -->
                     <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 mb-3 inline-block px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded-full">
                         knowledge
                     </span>
                     <h3 class="font-bold text-xl text-zinc-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                         IOS و AOSP؛ از پلتفرم تا محصول
                     </h3>
-                    <!-- Extract the first 25 words of the post for a short description -->
                     <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed line-clamp-3 mb-4">
                         وقتی از IOS برای یک محصول اختصاصی صحبت می‌کنیم، نقطه شروع فقط انتخاب نسخه سیستم‌عامل نیست؛ باید سخت‌افزار، چرخه عمر و تجربه کاربر را همزمان...
                     </p>
                 </div>
                 
-                <!-- Footer of the Card: Reading Time -->
                 <div class="mt-auto pt-4 border-t border-zinc-100 dark:border-zinc-700 flex justify-between items-center text-xs font-medium text-zinc-500 dark:text-zinc-400">
                     <span class="flex items-center gap-1.5">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <!-- FIX: Output the local variable 'reading_time' instead of 'post.reading_time' -->
                         زمان مطالعه: ۲ دقیقه
                     </span>
                     <span class="flex items-center gap-1 text-indigo-600 dark:text-indigo-400 opacity-0 group-hover:opacity-100 transform tranzinc-x-2 group-hover:tranzinc-x-0 transition-all duration-300">
@@ -188,29 +220,28 @@
         <!-- Beautiful Article Card -->
         <a href="/website-raybone-new/knowledge/2026/10/28/android-aosp-copy.html" class="group flex flex-col bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-zinc-100 dark:border-zinc-700 transition-all duration-300 hover:-translate-y-2">
             <div class="h-52 overflow-hidden relative">
-                <img src="/website-raybone-new/image1.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="Cover image for Android و AOSP؛ از پلتفرم تا محصول" />
+                <!-- FIX: Use post.image with a fallback default image -->
+                <img src="/website-raybone-new/assets/images/android-aosp.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="Cover image for Android و AOSP؛ از پلتفرم تا محصول" />
                 <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             
             <div class="p-6 flex-grow flex flex-col justify-between">
                 <div>
-                    <!-- Optional Tag/Category -->
                     <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 mb-3 inline-block px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded-full">
                         knowledge
                     </span>
                     <h3 class="font-bold text-xl text-zinc-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                         Android و AOSP؛ از پلتفرم تا محصول
                     </h3>
-                    <!-- Extract the first 25 words of the post for a short description -->
                     <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed line-clamp-3 mb-4">
                         وقتی از Android برای یک محصول اختصاصی صحبت می‌کنیم، نقطه شروع فقط انتخاب نسخه سیستم‌عامل نیست؛ باید سخت‌افزار، چرخه عمر و تجربه کاربر را همزمان...
                     </p>
                 </div>
                 
-                <!-- Footer of the Card: Reading Time -->
                 <div class="mt-auto pt-4 border-t border-zinc-100 dark:border-zinc-700 flex justify-between items-center text-xs font-medium text-zinc-500 dark:text-zinc-400">
                     <span class="flex items-center gap-1.5">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <!-- FIX: Output the local variable 'reading_time' instead of 'post.reading_time' -->
                         زمان مطالعه: ۴ دقیقه
                     </span>
                     <span class="flex items-center gap-1 text-indigo-600 dark:text-indigo-400 opacity-0 group-hover:opacity-100 transform tranzinc-x-2 group-hover:tranzinc-x-0 transition-all duration-300">
@@ -224,7 +255,6 @@
 
     </div>
 </section>
-
 
 <footer class="bg-zinc-900 pt-20 pb-10 border-t border-zinc-800 relative overflow-hidden mt-24">
     <!-- Decorative glowing background element -->
@@ -271,9 +301,9 @@
                 <ul class="space-y-3 text-sm text-zinc-400">
                     <li><a href="/website-raybone-new/knowledge/"
                             class="hover:text-indigo-400 transition-colors">دانشنامه</a></li>
-                    <li><a href="/website-raybone-new/blog/"
+                    <li><a href="javascript:void(0)"
                             class="hover:text-indigo-400 transition-colors">وبلاگ</a></li>
-                    <li><a href="#" class="hover:text-indigo-400 transition-colors">درباره رایبُن</a></li>
+                    <li><a href="/website-raybone-new/about/" class="hover:text-indigo-400 transition-colors">درباره رایبُن</a></li>
                     <li><a href="#" class="hover:text-indigo-400 transition-colors">فرصت‌های شغلی</a></li>
                 </ul>
             </div>
